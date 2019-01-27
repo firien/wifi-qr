@@ -11,12 +11,6 @@ When printing the page, only the QR code will print.
 
 ---
 
-
-### TODO
-
-- [ ] fix form UI
-- [ ] should handle multiple qr code generations
-
 ### Development
 
     npx webpack-dev-server

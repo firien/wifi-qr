@@ -4,14 +4,22 @@
     height: 100vh;
     overflow-y: hidden;
   }
+  * {
+    font-family: -apple-system, 'Helvetica Neue', 'Arial', 'Tahoma';
+    box-sizing: border-box;
+  }
+  body > .flex {
+    align-items: center;
+  }
   .flex {
     display: flex;
   }
+  #qr {
+    order: 2;
+  }
   .flex > * {
-    margin: 0;
     flex: 1 50%;
     box-sizing: border-box;
-    font-family: -apple-system, 'Helvetica Neue', 'Arial', 'Tahoma';
     font-size: 1em;
   }
   .center {
@@ -21,26 +29,42 @@
   .center:empty::after {
     content: 'QR Code…';
     color: grey;
+    line-height: 12rem;
+    min-height: 12rem;
+    display: block;
   }
   #about {
+    margin: 0 1em;
     text-align: center;
     border-top: thin solid #ddd;
   }
+  button[type=submit] {
+    max-width: 30vw;
+    margin: 0.5em 0;
+    cursor: pointer;
+  }
+  .form {
+    order: 1;
+    text-align: center;
+  }
   form.flex {
     flex-wrap: wrap;
+    max-width: 50vw;
+    justify-content: center;
+    align-items: center;
+  }
+  label {
+    text-align: right;
+    padding-right: 1em;
   }
   form.flex > label, form.flex > input {
-    flex: 1 1 50%;
+    flex: 1 1 40%;
   }
   form.flex > button {
     flex: 0 0 100%;
   }
-//  label {
-//    display: inline-block;
-//    width: 5rem;
-//  }
   button#installer {
-    background: url(../images/icon-180.4685c1b46790d3de3429.png) left no-repeat;
+    background: url(../images/icon-180.5eb5df2f16cbe133de6e.png) left no-repeat;
     font-family: -apple-system, 'Helvetica Neue', 'Arial', 'Tahoma';
     position: absolute;
     background-color: navy;
@@ -59,9 +83,60 @@
     cursor: pointer;
   }
 }
+
+@media screen and (max-width:650px) {
+  body > .flex {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #qr {
+    flex: 0 0 100%;
+    order: 0;
+  }
+  .form {
+    flex: 0 0 100%;
+    order: 0;
+    margin: 2em;
+  }
+  form.flex {
+    max-width: unset;
+  }
+  input {
+    margin-right: 10vw;
+  }
+}
+
+img {
+  animation: pop 0.35s;
+  animation-timing-function: ease-out;
+}
+@keyframes pop {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
 @media print {
+  * {
+    margin: 0;
+    box-sizing: border-box;
+  }
   div.form, #about {
     display: none;
+  }
+  body > .flex {
+    height: 100vh;
+    width: 100vw;
   }
   .center {
     display: flex;
