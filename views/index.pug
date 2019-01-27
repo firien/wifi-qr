@@ -24,12 +24,13 @@ html(lang="en")
       p Requires javascript
     div.flex
       div#qr.center
+        img
       div.form
         form#wifi.flex
           label(for='ssid') SSID
           input#ssid(type='text' placeholder='Network Name' required=true)
-          label(for='password' required=true) Password
-          input#password(type='text')
+          label(for='password') Password
+          input#password(type='text' required=true)
           button(type='submit') Generate
     #about
       :markdown-it

@@ -1,5 +1,6 @@
 @media screen {
   body {
+    background-color: ivory;
     margin: 0;
     height: 100vh;
     overflow-y: hidden;
@@ -10,12 +11,21 @@
   }
   body > .flex {
     align-items: center;
+    background-color: white;
   }
   .flex {
     display: flex;
   }
   #qr {
     order: 2;
+    img[src] {
+      animation: pop 0.35s;
+      animation-timing-function: ease-out;
+    }
+    img:not([height]) {
+      height: 200px;
+      width: 200px;
+    }
   }
   .flex > * {
     flex: 1 50%;
@@ -26,15 +36,7 @@
     text-align: center;
     margin: 2rem 0;
   }
-  .center:empty::after {
-    content: 'QR Code…';
-    color: grey;
-    line-height: 12rem;
-    min-height: 12rem;
-    display: block;
-  }
   #about {
-    background-color: ivory;
     text-align: center;
     border-top: thin solid #ddd;
     p {
@@ -139,10 +141,6 @@
   }
 }
 
-img {
-  animation: pop 0.35s;
-  animation-timing-function: ease-out;
-}
 @keyframes pop {
   0% {
     transform: scale(0.6);

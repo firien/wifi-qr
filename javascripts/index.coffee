@@ -47,10 +47,7 @@ generate = (text) ->
   ctx.fill()
   canvas.toBlob((blob) ->
     url = URL.createObjectURL(blob)
-    image = new Image()
-    destination = document.querySelector('#qr')
-    destination.removeChild(destination.firstChild) while destination.firstChild
-    destination.appendChild(image)
+    image = document.querySelector('#qr img')
     image.onload = ->
       this.setAttribute('height', this.naturalHeight)
       this.setAttribute('width', this.naturalWidth)

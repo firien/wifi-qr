@@ -1,6 +1,6 @@
-@charset "UTF-8";
 @media screen {
   body {
+    background-color: ivory;
     margin: 0;
     height: 100vh;
     overflow-y: hidden; }
@@ -8,11 +8,18 @@
     font-family: -apple-system, 'Helvetica Neue', 'Arial', 'Tahoma';
     box-sizing: border-box; }
   body > .flex {
-    align-items: center; }
+    align-items: center;
+    background-color: white; }
   .flex {
     display: flex; }
   #qr {
     order: 2; }
+    #qr img[src] {
+      animation: pop 0.35s;
+      animation-timing-function: ease-out; }
+    #qr img:not([height]) {
+      height: 200px;
+      width: 200px; }
   .flex > * {
     flex: 1 50%;
     box-sizing: border-box;
@@ -20,14 +27,7 @@
   .center {
     text-align: center;
     margin: 2rem 0; }
-  .center:empty::after {
-    content: 'QR Code…';
-    color: grey;
-    line-height: 12rem;
-    min-height: 12rem;
-    display: block; }
   #about {
-    background-color: ivory;
     text-align: center;
     border-top: thin solid #ddd; }
     #about p {
@@ -111,10 +111,6 @@
   form.flex {
     justify-content: space-around;
     max-width: unset; } }
-
-img {
-  animation: pop 0.35s;
-  animation-timing-function: ease-out; }
 
 @keyframes pop {
   0% {

@@ -51,21 +51,14 @@
     ctx.closePath();
     ctx.fill();
     return canvas.toBlob(function(blob) {
-      return window.requestAnimationFrame(function() {
-        var destination, image, url;
-        url = URL.createObjectURL(blob);
-        image = new Image();
-        destination = document.querySelector('#qr');
-        while (destination.firstChild) {
-          destination.removeChild(destination.firstChild);
-        }
-        destination.appendChild(image);
-        image.onload = function() {
-          this.setAttribute('height', this.naturalHeight);
-          return this.setAttribute('width', this.naturalWidth);
-        };
-        return image.src = url;
-      });
+      var image, url;
+      url = URL.createObjectURL(blob);
+      image = document.querySelector('#qr img');
+      image.onload = function() {
+        this.setAttribute('height', this.naturalHeight);
+        return this.setAttribute('width', this.naturalWidth);
+      };
+      return image.src = url;
     });
   };
 
