@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>WiFi-QR</title>
+    <meta charset="UTF-8">
+    <meta name="Description" content="QR code to join Wi-Fi network">
+    <meta name="theme-color" content="#fffff0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- scripts-->
+    <script src="bundle.0d2a1e6a7f2728caebfa.js" integrity="sha256-JcFQO0+4EPO9fr6/1LsJKMPAoWx/FoHf/HdeH4wo528="></script>
+    <script src="pwa.701a9841b79c0debf8e2.js" integrity="sha256-2/uSiirD6kv9lqRBTWsyEfQ9hYHJQIgbStnnNZImdW4="></script>
+    <script src="javascripts/index.96a04d476a0e8bfaf92d.js" integrity="sha256-+4hBeXry3eXqKhEEbBEKuKy0RHx3Xdbn8WikG0kj1nk="></script>
+    <!-- css-->
+    <link rel="stylesheet" href="stylesheets/index.f952d271a75e96112f3b.css">
+    <!-- icons-->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/icon-152.85033eb51371860f3cfa.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="images/icon-167.fb225094cf8d87ef12f3.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icon-180.5eb5df2f16cbe133de6e.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="images/icon-192.29f319cb88fabe83ff26.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="images/icon-512.1c96c8ca1b2628918cfa.png">
+    <!-- pwa-->
+    <link rel="manifest" href="manifest.webmanifest">
+  </head>
+  <body>
+    <div class="flex">
+      <div class="center" id="qr"></div>
+      <div class="form">
+        <form class="flex" id="wifi">
+          <label for="ssid">SSID</label>
+          <input id="ssid" type="text" placeholder="Network Name" required>
+          <label for="password">Password</label>
+          <input id="password" type="text">
+          <button type="submit">Generate</button>
+        </form>
+      </div>
+    </div>
+    <div id="about"><p>This is a <a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Progressive">PWA</a>. It can be used offline, it does not communicate with any servers. All images and data stay on your machine, everything is done in your browser. Source code is available on <a href="https://github.com/firien/wifi-qr/">GitHub</a>.</p>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+{
+    "name": "WiFi-QR",
+    "short_name": "WiFi-QR",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#fffff0",
+    "description": "QR code to join Wi-Fi network",
+    "icons": [
+        {
+            "src": "images/icon-152.85033eb51371860f3cfa.png",
+            "type": "image/png",
+            "sizes": "152x152"
+        },
+        {
+            "src": "images/icon-167.fb225094cf8d87ef12f3.png",
+            "type": "image/png",
+            "sizes": "167x167"
+        },
+        {
+            "src": "images/icon-180.5eb5df2f16cbe133de6e.png",
+            "type": "image/png",
+            "sizes": "180x180"
+        },
+        {
+            "src": "images/icon-192.29f319cb88fabe83ff26.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "images/icon-512.1c96c8ca1b2628918cfa.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ]
+}
