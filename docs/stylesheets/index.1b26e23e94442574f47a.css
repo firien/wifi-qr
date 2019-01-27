@@ -27,13 +27,22 @@
     min-height: 12rem;
     display: block; }
   #about {
-    margin: 0 1em;
+    background-color: ivory;
     text-align: center;
     border-top: thin solid #ddd; }
+    #about p {
+      padding: 1em; }
   button[type=submit] {
     max-width: 30vw;
     margin: 0.5em 0;
-    cursor: pointer; }
+    cursor: pointer;
+    border-radius: 0.4em;
+    background-color: seagreen;
+    color: white;
+    padding: 0.5em 0;
+    border: none; }
+    button[type=submit]:hover {
+      background-color: mediumseagreen; }
   .form {
     order: 1;
     text-align: center; }
@@ -45,10 +54,24 @@
   label {
     text-align: right;
     padding-right: 1em; }
+  input {
+    appearance: none;
+    -webkit-appearance: none;
+    border: thin #888 solid;
+    margin: 0.2em 0; }
   form.flex > label, form.flex > input {
-    flex: 1 1 40%; }
+    flex: 1 1 50%; }
   form.flex > button {
     flex: 0 0 100%; }
+  noscript p {
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    right: 1em;
+    text-align: center;
+    background-color: rgba(255, 255, 50, 0.7);
+    border: thin goldenrod solid;
+    padding: 0.5em 0; }
   button#installer {
     background: url(../images/icon-180.5eb5df2f16cbe133de6e.png) left no-repeat;
     font-family: -apple-system, 'Helvetica Neue', 'Arial', 'Tahoma';
@@ -72,6 +95,10 @@
   body > .flex {
     flex-wrap: wrap;
     justify-content: center; }
+  form.flex > label, form.flex > input {
+    flex: 0 0 80%; }
+  label {
+    text-align: left; }
   #qr {
     flex: 0 0 100%;
     order: 0; }
@@ -80,9 +107,8 @@
     order: 0;
     margin: 2em; }
   form.flex {
-    max-width: unset; }
-  input {
-    margin-right: 10vw; } }
+    justify-content: space-around;
+    max-width: unset; } }
 
 img {
   animation: pop 0.35s;

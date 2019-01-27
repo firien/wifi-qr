@@ -1,7 +1,7 @@
 (function() {
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/wifi-qr/service.js', {
-      scope: '/wifi-qr/'
+    navigator.serviceWorker.register('/service.js', {
+      scope: '/'
     }).then(function(registration) {
       var refreshPage;
       refreshPage = function(worker) {

@@ -11,6 +11,11 @@ When printing the page, only the QR code will print.
 
 ---
 
+
+### TODO
+
+- [ ] [wifi escaping](https://github.com/zxing/zxing/wiki/Barcode-Contents#wi-fi-network-config-android-ios-11)
+
 ### Development
 
     npx webpack-dev-server
