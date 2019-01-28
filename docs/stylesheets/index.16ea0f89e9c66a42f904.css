@@ -2,8 +2,7 @@
   body {
     background-color: ivory;
     margin: 0;
-    height: 100vh;
-    overflow-y: hidden; }
+    height: 100vh; }
   * {
     font-family: -apple-system, 'Helvetica Neue', 'Arial', 'Tahoma';
     box-sizing: border-box; }
@@ -16,10 +15,15 @@
     order: 2; }
     #qr img[src] {
       animation: pop 0.35s;
-      animation-timing-function: ease-out; }
+      animation-timing-function: ease-out;
+      cursor: pointer; }
     #qr img:not([height]) {
-      height: 200px;
-      width: 200px; }
+      height: 204px;
+      width: 204px;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12'><rect fill='#bbb' x='0' y='0' width='6' height='6'/><rect fill='#bbb' x='6' y='6' width='6' height='6'/></svg>");
+      pointer-events: none; }
+    #qr figcaption {
+      display: none; }
   .flex > * {
     flex: 1 50%;
     box-sizing: border-box;
@@ -32,6 +36,8 @@
     border-top: thin solid #ddd; }
     #about p {
       padding: 1em; }
+    #about a {
+      text-shadow: none; }
   button[type=submit] {
     max-width: 30vw;
     margin: 0.5em 0;
@@ -43,6 +49,8 @@
     border: none; }
     button[type=submit]:hover {
       background-color: mediumseagreen; }
+    button[type=submit]:focus {
+      outline: none; }
   .form {
     order: 1;
     text-align: center; }
@@ -107,7 +115,7 @@
   .form {
     flex: 0 0 100%;
     order: 0;
-    margin: 2em; }
+    margin-bottom: 2em; }
   form.flex {
     justify-content: space-around;
     max-width: unset; } }
@@ -126,7 +134,8 @@
 @media print {
   * {
     margin: 0;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    font-family: -apple-system, 'Helvetica Neue', 'Arial', 'Tahoma'; }
   div.form, #about {
     display: none; }
   body > .flex {
@@ -137,4 +146,7 @@
     height: 100vh;
     width: 100vw;
     justify-content: space-around;
-    align-items: center; } }
+    align-items: center; }
+  figcaption {
+    margin-top: 2em;
+    text-align: center; } }

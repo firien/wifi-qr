@@ -55,6 +55,9 @@ generate = (text) ->
   )
 
 document.addEventListener('DOMContentLoaded', ->
+  document.querySelector('#qr img').addEventListener('click', ->
+    window.print()
+  )
   document.querySelector('form#wifi').addEventListener('submit', (e) ->
     e.preventDefault()
     e.stopPropagation()

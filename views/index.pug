@@ -24,13 +24,15 @@ html(lang="en")
       p Requires javascript
     div.flex
       div#qr.center
-        img
+        figure
+          img
+          figcaption Scan to Join WiFi Network.
       div.form
         form#wifi.flex
           label(for='ssid') SSID
-          input#ssid(type='text' placeholder='Network Name' required=true)
+          input#ssid(type='text' placeholder='Network Name' autofocus=true autocomplete='off' required=true)
           label(for='password') Password
-          input#password(type='text' required=true)
+          input#password(type='text' autocomplete='off' spellcheck='false' required=true)
           button(type='submit') Generate
     #about
       :markdown-it

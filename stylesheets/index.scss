@@ -3,7 +3,6 @@
     background-color: ivory;
     margin: 0;
     height: 100vh;
-    overflow-y: hidden;
   }
   * {
     font-family: -apple-system, 'Helvetica Neue', 'Arial', 'Tahoma';
@@ -21,10 +20,16 @@
     img[src] {
       animation: pop 0.35s;
       animation-timing-function: ease-out;
+      cursor: pointer;
     }
     img:not([height]) {
-      height: 200px;
-      width: 200px;
+      height: 204px;
+      width: 204px;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12'><rect fill='#bbb' x='0' y='0' width='6' height='6'/><rect fill='#bbb' x='6' y='6' width='6' height='6'/></svg>");
+      pointer-events: none;
+    }
+    figcaption {
+      display: none;
     }
   }
   .flex > * {
@@ -37,10 +42,15 @@
     margin: 2rem 0;
   }
   #about {
+//    color: white;
+//    text-shadow: black 0 1px;
     text-align: center;
     border-top: thin solid #ddd;
     p {
       padding: 1em;
+    }
+    a {
+      text-shadow: none;
     }
   }
   button[type=submit] {
@@ -54,6 +64,9 @@
     border: none;
     &:hover {
       background-color: mediumseagreen;
+    }
+    &:focus {
+      outline: none;
     }
   }
   .form {
@@ -133,7 +146,7 @@
   .form {
     flex: 0 0 100%;
     order: 0;
-    margin: 2em;
+    margin-bottom: 2em;
   }
   form.flex {
     justify-content: space-around;
@@ -156,11 +169,11 @@
   }
 }
 
-
 @media print {
   * {
     margin: 0;
     box-sizing: border-box;
+    font-family: -apple-system, 'Helvetica Neue', 'Arial', 'Tahoma';
   }
   div.form, #about {
     display: none;
@@ -175,5 +188,9 @@
     width: 100vw;
     justify-content: space-around;
     align-items: center;
+  }
+  figcaption {
+    margin-top: 2em;
+    text-align: center;
   }
 }

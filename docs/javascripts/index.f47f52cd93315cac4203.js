@@ -63,6 +63,9 @@
   };
 
   document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('#qr img').addEventListener('click', function() {
+      return window.print();
+    });
     return document.querySelector('form#wifi').addEventListener('submit', function(e) {
       var password, ssid, text;
       e.preventDefault();
