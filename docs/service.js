@@ -1,13 +1,13 @@
 (function() {
   var $cacheName, $prefix, $urls, clearPreviousCaches, tag;
 
-  tag = '6';
+  tag = '7';
 
   $prefix = 'WIFI-QR';
 
   $cacheName = `${$prefix}-${tag}`;
 
-  $urls = ['/wifi-qr/bundle.0d2a1e6a7f2728caebfa.js', '/wifi-qr/javascripts/index.96b2a779aedc7780e783.js', '/wifi-qr/stylesheets/index.7e3d1ccd17b5d2039da0.css', '/wifi-qr/images/icon-152.85033eb51371860f3cfa.png', '/wifi-qr/images/icon-167.fb225094cf8d87ef12f3.png', '/wifi-qr/images/icon-180.5eb5df2f16cbe133de6e.png', '/wifi-qr/images/icon-192.29f319cb88fabe83ff26.png', '/wifi-qr/images/icon-512.1c96c8ca1b2628918cfa.png', '/wifi-qr/pwa.701a9841b79c0debf8e2.js', '/wifi-qr/manifest.webmanifest', '/wifi-qr/index.html', '/wifi-qr/'];
+  $urls = ['/wifi-qr/bundle.0d2a1e6a7f2728caebfa.js', '/wifi-qr/javascripts/index.96b2a779aedc7780e783.js', '/wifi-qr/stylesheets/index.16d18585872ed907a5ac.css', '/wifi-qr/images/icon-152.66f47ef3afd38b1c0df8.png', '/wifi-qr/images/icon-167.203a1acd0aaf256b7f70.png', '/wifi-qr/images/icon-180.339b8ed031f52d5f0abe.png', '/wifi-qr/images/icon-192.01d21872e8880d9f5b6f.png', '/wifi-qr/images/icon-512.fa905a7bad166d5a9bc4.png', '/wifi-qr/pwa.701a9841b79c0debf8e2.js', '/wifi-qr/manifest.webmanifest', '/wifi-qr/index.html', '/wifi-qr/'];
 
   self.addEventListener('install', function(event) {
     return event.waitUntil(caches.open($cacheName).then(function(cache) {

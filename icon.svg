@@ -572,16 +572,16 @@
       </g>
     </mask>
   </defs>
-  <rect fill='gold' x='0' y='0' width='128' height='128'/>
+  <rect fill='rgb(144,44,95)' x='0' y='0' width='128' height='128'/>
   <!-- <circle cx='64' cy='100' r='77'/> -->
-  <path fill='black' stroke='none' mask='url(#mask)' d="M 9.55,45.55 a 77 77 1 0 1 108.9 0 l -7.78 7.78
+  <path fill='white' stroke='none' mask='url(#mask)' d="M 9.55,45.55 a 77 77 1 0 1 108.9 0 l -7.78 7.78
               a 66 66 0 0 0 -93.34 0 z
            m 15.56 15.56 a 55 55 1 0 1 77.78 0 l -7.78 7.78
               a 44 44 0 0 0 -62.22 0 z
            m 15.56 15.56 a 33 33 1 0 1 46.66 0 l -7.78 7.78
               a 22 22 0 0 0 -31.1 0 z
            m 15.56 15.56 a 11 11 1 0 1 15.54 0 L 64 100 z"/>
-  <path fill='none' stroke='black' stroke-width='2' d="M 9.55,45.55 a 77 77 1 0 1 108.9 0 l -7.78 7.78
+  <path fill='none' stroke='white' stroke-width='2' d="M 9.55,45.55 a 77 77 1 0 1 108.9 0 l -7.78 7.78
               a 66 66 0 0 0 -93.34 0 z
            m 15.56 15.56 a 55 55 1 0 1 77.78 0 l -7.78 7.78
               a 44 44 0 0 0 -62.22 0 z
