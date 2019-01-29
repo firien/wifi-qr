@@ -3,6 +3,7 @@
 
   generate = function(text) {
     var band, canvas, center, ctx, endArc, matrix, nub, radius, scale, size, startArc;
+    // use higest error correction, so we can embed wifi icon
     matrix = QR(text, 'H');
     scale = 6;
     size = matrix.length * scale;
@@ -11,6 +12,7 @@
     canvas.height = size;
     ctx = canvas.getContext('2d');
     ctx.fillStyle = 'black';
+    // draw qr code
     matrix.forEach(function(row, y) {
       return row.forEach(function(value, x) {
         if (value) {
@@ -18,11 +20,14 @@
         }
       });
     });
+    //          wifi icon
+    // draw white background
     radius = size / 2.5;
     band = radius / 9;
     center = [size / 2, ((size - radius) / 2) + radius - band];
-    startArc = -Math.PI / 4 * 3;
-    endArc = -Math.PI / 4;
+    // arc from x axis
+    startArc = -Math.PI / 4 * 3; // -135 deg
+    endArc = -Math.PI / 4; // -45 def
     ctx.fillStyle = 'white';
     ctx.strokeStyle = 'white';
     ctx.lineWidth = band * 2;
@@ -32,6 +37,7 @@
     ctx.closePath();
     ctx.fill();
     ctx.stroke();
+    // draw arcs
     ctx.lineWidth = band;
     ctx.strokeStyle = '#bbb';
     ctx.beginPath();
@@ -44,12 +50,14 @@
     ctx.arc(center[0], center[1], radius - (band * 6.5), startArc, endArc);
     ctx.stroke();
     ctx.fillStyle = '#bbb';
+    // draw last nub
     nub = radius - (band * 8);
     ctx.beginPath();
     ctx.arc(center[0], center[1], nub, startArc, endArc);
     ctx.lineTo(center[0], center[1]);
     ctx.closePath();
     ctx.fill();
+    // convert png
     return canvas.toBlob(function(blob) {
       var image, url;
       url = URL.createObjectURL(blob);

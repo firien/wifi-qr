@@ -10,9 +10,9 @@
     <!-- scripts-->
     <script src="bundle.0d2a1e6a7f2728caebfa.js" integrity="sha256-JcFQO0+4EPO9fr6/1LsJKMPAoWx/FoHf/HdeH4wo528="></script>
     <script src="pwa.701a9841b79c0debf8e2.js" integrity="sha256-2/uSiirD6kv9lqRBTWsyEfQ9hYHJQIgbStnnNZImdW4="></script>
-    <script src="javascripts/index.f47f52cd93315cac4203.js" integrity="sha256-oPGoIT3pXFyhOCigammn3+waB6m9cYhH5gGpuCIVddU="></script>
+    <script src="javascripts/index.96b2a779aedc7780e783.js" integrity="sha256-ovLKybMTeIIsoyQexlcrcHxjS1TEZmOgPFGTP6jEgBw="></script>
     <!-- css-->
-    <link rel="stylesheet" href="stylesheets/index.16ea0f89e9c66a42f904.css">
+    <link rel="stylesheet" href="stylesheets/index.7e3d1ccd17b5d2039da0.css">
     <!-- icons-->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="152x152" href="images/icon-152.85033eb51371860f3cfa.png">
@@ -43,7 +43,23 @@
         </form>
       </div>
     </div>
-    <div id="about"><p>This is a <a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Progressive">PWA</a>. It can be used offline, it does not communicate with any servers. All images and data stay on your machine, everything is done in your browser. Source code is available on <a href="https://github.com/firien/wifi-qr/">GitHub</a>.</p>
+    <div id="about">
+      <details>
+        <summary>FAQ</summary>
+        <dl>
+          <dt>Why is a password required?</dt>
+          <dd>
+            <ol>
+              <li>If you don't have a password, you probably don't need a QR code</li>
+              <li>You really should have a password</li>
+            </ol>
+          </dd>
+          <dt>What's with the WiFi logo?</dt>
+          <dd>The QR code is generated with highest level of error correction (or redundancy). This is typically used to retain scans even when a piece is missing or smeared; That's why we can have an icon in the center and still have a scannable code.</dd>
+          <dt>What authentication does this use?</dt>
+          <dd>Assumes WPA</dd>
+        </dl>
+      </details><p>This is a <a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Progressive">PWA</a>. It can be used offline, it does not communicate with any servers. All images and data stay on your machine, everything is done in your browser. Source code is available on <a href="https://github.com/firien/wifi-qr/">GitHub</a>.</p>
 
     </div>
   </body>

@@ -1,6 +1,7 @@
 @media screen {
   body {
     background-color: ivory;
+    background-color: #8b2e62;
     margin: 0;
     height: 100vh; }
   * {
@@ -32,12 +33,16 @@
     text-align: center;
     margin: 2rem 0; }
   #about {
+    color: #eee;
+    text-shadow: black 0 1px;
     text-align: center;
-    border-top: thin solid #ddd; }
-    #about p {
-      padding: 1em; }
+    border-top: thin solid #ddd;
+    padding: 1em;
+    display: flex; }
     #about a {
       text-shadow: none; }
+    #about > p, #about details {
+      flex: 0 0 50%; }
   button[type=submit] {
     max-width: 30vw;
     margin: 0.5em 0;
@@ -69,7 +74,7 @@
     margin: 0.2em 0;
     padding: 0.4em; }
   form.flex > label, form.flex > input {
-    flex: 1 1 50%; }
+    flex: 0 1 40%; }
   form.flex > button {
     flex: 0 0 100%; }
   noscript p {
@@ -81,6 +86,19 @@
     background-color: rgba(255, 255, 50, 0.7);
     border: thin goldenrod solid;
     padding: 0.5em 0; }
+  details {
+    text-align: left; }
+    details summary {
+      cursor: pointer; }
+      details summary:focus {
+        outline: none; }
+    details ol {
+      margin: 0;
+      padding-left: 1em; }
+    details dd {
+      padding: 0.5em 0; }
+    details dt {
+      padding-left: 1em; }
   button#installer {
     background: url(../images/icon-180.5eb5df2f16cbe133de6e.png) left no-repeat;
     font-family: -apple-system, 'Helvetica Neue', 'Arial', 'Tahoma';
@@ -109,6 +127,9 @@
   label {
     text-align: left;
     padding: 0.4em; }
+  details {
+    padding-bottom: 1em;
+    border-bottom: thin ridge #ddd; }
   #qr {
     flex: 0 0 100%;
     order: 0; }
@@ -118,7 +139,9 @@
     margin-bottom: 2em; }
   form.flex {
     justify-content: space-around;
-    max-width: unset; } }
+    max-width: unset; }
+  #about {
+    display: block; } }
 
 @keyframes pop {
   0% {

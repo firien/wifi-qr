@@ -1,6 +1,7 @@
 @media screen {
   body {
     background-color: ivory;
+    background-color: complement(seagreen);
     margin: 0;
     height: 100vh;
   }
@@ -42,15 +43,17 @@
     margin: 2rem 0;
   }
   #about {
-//    color: white;
-//    text-shadow: black 0 1px;
+    color: #eee;
+    text-shadow: black 0 1px;
     text-align: center;
     border-top: thin solid #ddd;
-    p {
-      padding: 1em;
-    }
+    padding: 1em;
+    display: flex;
     a {
       text-shadow: none;
+    }
+    &> p, details {
+      flex: 0 0 50%;
     }
   }
   button[type=submit] {
@@ -91,7 +94,7 @@
     padding: 0.4em;
   }
   form.flex > label, form.flex > input {
-    flex: 1 1 50%;
+    flex: 0 1 40%;
   }
   form.flex > button {
     flex: 0 0 100%;
@@ -105,6 +108,25 @@
     background-color: rgba(255,255,50,0.7);
     border: thin goldenrod solid;
     padding: 0.5em 0;
+  }
+  details {
+    text-align: left;
+    summary {
+      cursor: pointer;
+      &:focus {
+        outline: none;
+      }
+    }
+    ol {
+      margin: 0;
+      padding-left: 1em;
+    }
+    dd {
+      padding: 0.5em 0;
+    }
+    dt {
+      padding-left: 1em;
+    }
   }
   button#installer {
     background: url(../images/icon-180.5eb5df2f16cbe133de6e.png) left no-repeat;
@@ -139,6 +161,10 @@
     text-align: left;
     padding: 0.4em;
   }
+  details {
+    padding-bottom: 1em;
+    border-bottom: thin ridge #ddd;
+  }
   #qr {
     flex: 0 0 100%;
     order: 0;
@@ -151,6 +177,9 @@
   form.flex {
     justify-content: space-around;
     max-width: unset;
+  }
+  #about {
+    display: block;
   }
 }
 

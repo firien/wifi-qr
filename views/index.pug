@@ -35,5 +35,17 @@ html(lang="en")
           input#password(type='text' autocomplete='off' spellcheck='false' required=true)
           button(type='submit') Generate
     #about
+      details
+        summary FAQ
+        dl
+          dt Why is a password required?
+          dd
+            ol
+              li If you don't have a password, you probably don't need a QR code
+              li You really should have a password
+          dt What's with the WiFi logo?
+          dd The QR code is generated with highest level of error correction (or redundancy). This is typically used to retain scans even when a piece is missing or smeared; That's why we can have an icon in the center and still have a scannable code.
+          dt What authentication does this use?
+          dd Assumes WPA
       :markdown-it
         This is a [PWA](https://developer.mozilla.org/en-US/docs/Web/Apps/Progressive). It can be used offline, it does not communicate with any servers. All images and data stay on your machine, everything is done in your browser. Source code is available on [GitHub](https://github.com/firien/wifi-qr/).
