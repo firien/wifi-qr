@@ -1,7 +1,7 @@
 (function() {
   var $cacheName, $prefix, $urls, clearPreviousCaches, tag;
 
-  tag = '7';
+  tag = '8';
 
   $prefix = 'WIFI-QR';
 

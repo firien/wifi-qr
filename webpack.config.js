@@ -15,8 +15,8 @@ const app = new PWAPlugin({
   name: 'WiFi-QR',
   scope: 'wifi-qr',
   description: "QR code to join Wi-Fi network",
-  theme: '#fffff0',
-  tag: 7,
+  theme_color: '#fffff0',
+  tag: 8,
   mode: mode()
 })
 

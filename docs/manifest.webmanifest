@@ -4,6 +4,7 @@
     "start_url": ".",
     "display": "standalone",
     "background_color": "#fffff0",
+    "theme_color": "#fffff0",
     "description": "QR code to join Wi-Fi network",
     "icons": [
         {
