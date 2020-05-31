@@ -1,5 +1,5 @@
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/service.js', {scope: '/'}).then((registration) => {
+  navigator.serviceWorker.register('/wifi-qr/service.js', {scope: '/wifi-qr/'}).then((registration) => {
     const refreshPage = (worker) => {
       if (worker.state != 'activated') {
         worker.postMessage({action: 'skipWaiting'});

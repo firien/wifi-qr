@@ -1,32 +1,32 @@
-const tag = '9';
+const tag = '10';
 const $prefix = 'WIFI-QR';
 const $cacheName = `${$prefix}-${tag}`;
 
 const $urls = [
   
-  'bundle.3b29b8b3c20b3f77cb81.js',
+  '/wifi-qr/bundle.daf1911dd8f80c2e6be3.js',
   
-  'javascripts/index.46f0cc388fe877dffc90.js',
+  '/wifi-qr/javascripts/index.46f0cc388fe877dffc90.js',
   
-  'stylesheets/index.05de6fb592343778cb35.css',
+  '/wifi-qr/stylesheets/index.05de6fb592343778cb35.css',
   
-  'images/icon-152.66f47ef3afd38b1c0df8.png',
+  '/wifi-qr/images/icon-152.66f47ef3afd38b1c0df8.png',
   
-  'images/icon-167.203a1acd0aaf256b7f70.png',
+  '/wifi-qr/images/icon-167.203a1acd0aaf256b7f70.png',
   
-  'images/icon-180.339b8ed031f52d5f0abe.png',
+  '/wifi-qr/images/icon-180.339b8ed031f52d5f0abe.png',
   
-  'images/icon-192.01d21872e8880d9f5b6f.png',
+  '/wifi-qr/images/icon-192.01d21872e8880d9f5b6f.png',
   
-  'images/icon-512.fa905a7bad166d5a9bc4.png',
+  '/wifi-qr/images/icon-512.fa905a7bad166d5a9bc4.png',
   
-  'pwa.ba451b196f9dce938197.js',
+  '/wifi-qr/pwa.2c3bccaa9a5e0b649e9a.js',
   
-  'manifest.webmanifest',
+  '/wifi-qr/manifest.webmanifest',
   
-  'index.html',
+  '/wifi-qr/index.html',
   
-  '/',
+  '/wifi-qr/',
   
 ];
 
