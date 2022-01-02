@@ -1,36 +1,36 @@
 {
-    "name": "WiFi-QR",
-    "short_name": "WiFi-QR",
-    "start_url": ".",
-    "display": "standalone",
-    "background_color": "#fffff0",
-    "theme_color": "#fffff0",
-    "description": "QR code to join Wi-Fi network",
-    "icons": [
-        {
-            "src": "images/icon-152.66f47ef3afd38b1c0df8.png",
-            "type": "image/png",
-            "sizes": "152x152"
-        },
-        {
-            "src": "images/icon-167.203a1acd0aaf256b7f70.png",
-            "type": "image/png",
-            "sizes": "167x167"
-        },
-        {
-            "src": "images/icon-180.339b8ed031f52d5f0abe.png",
-            "type": "image/png",
-            "sizes": "180x180"
-        },
-        {
-            "src": "images/icon-192.01d21872e8880d9f5b6f.png",
-            "type": "image/png",
-            "sizes": "192x192"
-        },
-        {
-            "src": "images/icon-512.fa905a7bad166d5a9bc4.png",
-            "type": "image/png",
-            "sizes": "512x512"
-        }
-    ]
+  "name": "Wifi-qr",
+  "short_name": "Wifi-qr",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#555555",
+  "theme_color": "#fffff0",
+  "description": "QR code to join Wi-Fi network",
+  "icons": [
+    {
+      "src": "images/icon-152-YPJW54XW.png",
+      "type": "image/png",
+      "sizes": "152x152"
+    },
+    {
+      "src": "images/icon-167-7PH5PONM.png",
+      "type": "image/png",
+      "sizes": "167x167"
+    },
+    {
+      "src": "images/icon-180-36LXCBYR.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    },
+    {
+      "src": "images/icon-192-LZYI3CPO.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "images/icon-512-UXGKNZA6.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
 }

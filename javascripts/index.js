@@ -1,3 +1,20 @@
+import { QR } from 'qr-image/lib/qr-base'
+
+// qr lib was built for node
+// here is a barebone buffer polyfill
+self.Buffer = function (data) {
+  if (typeof data === 'string') {
+    let enc = new TextEncoder(); // always utf-8
+    return enc.encode(data);
+  } else if (typeof data === 'number') {
+    return new Uint8Array(data)
+  } else if (Array.isArray(data)) {
+    return Uint8Array.from(data)
+  } else {
+    throw new Error("Unsupported buffer data");
+  }
+}
+
 const generate = function(text) {
   // use higest error correction, so we can embed wifi icon
   let matrix = QR(text, 'H');
@@ -10,9 +27,9 @@ const generate = function(text) {
   ctx.fillStyle = 'black';
   // draw qr code
   matrix.forEach(function(row, y) {
-    return row.forEach(function(value, x) {
+    row.forEach(function(value, x) {
       if (value) {
-        return ctx.fillRect(x * scale, y * scale, scale, scale);
+        ctx.fillRect(x * scale, y * scale, scale, scale);
       }
     });
   });
@@ -54,14 +71,13 @@ const generate = function(text) {
   ctx.closePath();
   ctx.fill();
   // convert png
-  return canvas.toBlob(function(blob) {
+  canvas.toBlob(async function(blob) {
     let url = URL.createObjectURL(blob);
     let image = document.querySelector('#qr img');
-    image.onload = function() {
-      this.setAttribute('height', this.naturalHeight);
-      return this.setAttribute('width', this.naturalWidth);
-    };
-    return image.src = url;
+    image.src = url;
+    await image.decode()
+    image.setAttribute('height', image.naturalHeight);
+    image.setAttribute('width', image.naturalWidth);
   });
 };
 
@@ -76,6 +92,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let ssid = this['ssid'].value;
     let password = this['password'].value;
     let text = `WIFI:T:WPA;S:${ssid};P:${password};;`;
-    return generate(text);
+    generate(text);
   });
 });

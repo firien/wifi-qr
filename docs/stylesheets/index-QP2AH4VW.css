@@ -1,3 +1,4 @@
+/* stylesheets/index.css */
 @media screen {
   body {
     background-color: #8b2e62;
@@ -5,7 +6,11 @@
     height: 100vh;
   }
   * {
-    font-family: -apple-system, 'Helvetica Neue', 'Arial', 'Tahoma';
+    font-family:
+      -apple-system,
+      "Helvetica Neue",
+      "Arial",
+      "Tahoma";
     box-sizing: border-box;
   }
   body > .flex {
@@ -52,7 +57,8 @@
   #about a {
     text-shadow: none;
   }
-  #about > p, details {
+  #about > p,
+  details {
     flex: 0 0 50%;
   }
   button[type=submit] {
@@ -92,7 +98,8 @@
     margin: 0.2em 0;
     padding: 0.4em;
   }
-  form.flex > label, form.flex > input {
+  form.flex > label,
+  form.flex > input {
     flex: 0 1 40%;
   }
   form.flex > button {
@@ -104,7 +111,7 @@
     left: 1em;
     right: 1em;
     text-align: center;
-    background-color: rgba(255,255,50,0.7);
+    background-color: rgba(255, 255, 50, 0.7);
     border: thin goldenrod solid;
     padding: 0.5em 0;
   }
@@ -127,33 +134,14 @@
   details dt {
     padding-left: 1em;
   }
-  button#installer {
-    background: url(../images/icon-180.339b8ed031f52d5f0abe.png) left no-repeat;
-    font-family: -apple-system, 'Helvetica Neue', 'Arial', 'Tahoma';
-    position: absolute;
-    background-color: navy;
-    top: 0;
-    right: 0;
-    margin: 1em;
-    border: thin solid white;
-    border-radius: 0.2em;
-    color: #fffff0;
-    font-size: 1.5em;
-    line-height: 1.5em;
-    height: 2em;
-    background-size: 2em 2em;
-    padding-left: 2.5em;
-    padding-right: 0.5em;
-    cursor: pointer;
-  }
 }
-
 @media screen and (max-width:650px) {
   body > .flex {
     flex-wrap: wrap;
     justify-content: center;
   }
-  form.flex > label, form.flex > input {
+  form.flex > label,
+  form.flex > input {
     flex: 0 0 80%;
   }
   label {
@@ -181,7 +169,6 @@
     display: block;
   }
 }
-
 @keyframes pop {
   0% {
     transform: scale(0.6);
@@ -196,14 +183,18 @@
     opacity: 1;
   }
 }
-
 @media print {
   * {
     margin: 0;
     box-sizing: border-box;
-    font-family: -apple-system, 'Helvetica Neue', 'Arial', 'Tahoma';
+    font-family:
+      -apple-system,
+      "Helvetica Neue",
+      "Arial",
+      "Tahoma";
   }
-  div.form, #about {
+  div.form,
+  #about {
     display: none;
   }
   body > .flex {
@@ -222,3 +213,4 @@
     text-align: center;
   }
 }
+/*# sourceMappingURL=index-QP2AH4VW.css.map */

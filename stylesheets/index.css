@@ -127,25 +127,6 @@
   details dt {
     padding-left: 1em;
   }
-  button#installer {
-    background: url(../images/icon-180.339b8ed031f52d5f0abe.png) left no-repeat;
-    font-family: -apple-system, 'Helvetica Neue', 'Arial', 'Tahoma';
-    position: absolute;
-    background-color: navy;
-    top: 0;
-    right: 0;
-    margin: 1em;
-    border: thin solid white;
-    border-radius: 0.2em;
-    color: #fffff0;
-    font-size: 1.5em;
-    line-height: 1.5em;
-    height: 2em;
-    background-size: 2em 2em;
-    padding-left: 2.5em;
-    padding-right: 0.5em;
-    cursor: pointer;
-  }
 }
 
 @media screen and (max-width:650px) {
