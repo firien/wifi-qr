@@ -3,7 +3,7 @@ A small [PWA](https://developer.mozilla.org/en-US/docs/Web/Apps/Progressive) to 
 
 QR generation provided by [qr-image](https://github.com/alexeyten/qr-image).
 
-Uses [gh-pwa](https://github.com/firien/gh-pwa) to build docs/ folder.
+Uses [esbuild-plugin-ghpages-pwa](https://github.com/firien/esbuild-plugin-ghpages-pwa) to build docs/ folder.
 
 ## Printing
 
@@ -18,4 +18,4 @@ When printing the page, only the QR code will print.
 
 ### Development
 
-    npx webpack-dev-server
+    node ./build.js
