@@ -37,37 +37,38 @@ const generate = function(text) {
   // draw white background
   let radius = size / 2.5;
   let band = radius / 9;
-  let center = [size / 2, ((size - radius) / 2) + radius - band];
+  let [x, y] = [size / 2, ((size - radius) / 2) + radius - band];
   // arc from x axis
-  let startArc = -Math.PI / 4 * 3; // -135 deg
-  let endArc = -Math.PI / 4; // -45 def
+  let startArc = Math.PI / -2; // -90 deg
+  let endArc = 0; // 0 deg
   ctx.fillStyle = 'white';
-  ctx.strokeStyle = 'white';
-  ctx.lineWidth = band * 2;
+  ctx.translate(x, y);
+  ctx.rotate(Math.PI / -4);
+  ctx.translate(-x, -y);
   ctx.beginPath();
-  ctx.arc(center[0], center[1], radius - (band * 2), startArc, endArc);
-  ctx.lineTo(center[0], center[1]);
+  let padding = band;
+  let a = Math.asin(padding / (radius - band))
+  ctx.arc(x, y, radius - band, startArc - a, a);
+  ctx.lineTo(x-padding, y+padding);
   ctx.closePath();
   ctx.fill();
-  ctx.stroke();
   // draw arcs
-  ctx.lineWidth = band;
-  ctx.strokeStyle = '#bbb';
-  ctx.beginPath();
-  ctx.arc(center[0], center[1], radius - (band * 2.5), startArc, endArc);
-  ctx.stroke();
-  ctx.beginPath();
-  ctx.arc(center[0], center[1], radius - (band * 4.5), startArc, endArc);
-  ctx.stroke();
-  ctx.beginPath();
-  ctx.arc(center[0], center[1], radius - (band * 6.5), startArc, endArc);
-  ctx.stroke();
   ctx.fillStyle = '#bbb';
+  for (let i=3; i<8; i=i+2) {
+    let r1 = radius - (band * i)
+    let r2 = radius - (band * (i-1))
+    ctx.beginPath();
+    ctx.arc(x, y, r2, endArc, startArc, true);
+    ctx.lineTo(x, y - r1);
+    ctx.arc(x, y, r1, startArc, endArc);
+    ctx.closePath()
+    ctx.fill();
+  }
   // draw last nub
   let nub = radius - (band * 8);
   ctx.beginPath();
-  ctx.arc(center[0], center[1], nub, startArc, endArc);
-  ctx.lineTo(center[0], center[1]);
+  ctx.arc(x, y, nub, startArc, endArc);
+  ctx.lineTo(x, y);
   ctx.closePath();
   ctx.fill();
   // convert png
