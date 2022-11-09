@@ -741,6 +741,17 @@
 
   // javascripts/index.js
   var import_qr_base = __toESM(require_qr_base(), 1);
+
+  // javascripts/wifi.js
+  var regex = /[\\;,":]/g;
+  var escape = (string) => string.replace(regex, "\\$&");
+  var wifi_default = (type, ssid, password) => {
+    let escapedSSID = escape(ssid);
+    let escapedPassword = escape(password);
+    return `WIFI:T:${type};S:${escapedSSID};P:${escapedPassword};;`;
+  };
+
+  // javascripts/index.js
   self.Buffer = function(data) {
     if (typeof data === "string") {
       let enc = new TextEncoder();
@@ -812,17 +823,15 @@
     });
   };
   document.addEventListener("DOMContentLoaded", function() {
-    document.querySelector("#qr img").addEventListener("click", function() {
-      return window.print();
-    });
-    return document.querySelector("form#wifi").addEventListener("submit", function(e) {
+    document.querySelector("#qr img").addEventListener("click", () => window.print());
+    document.querySelector("form#wifi").addEventListener("submit", function(e) {
       e.preventDefault();
       e.stopPropagation();
       let ssid = this["ssid"].value;
       let password = this["password"].value;
-      let text = `WIFI:T:WPA;S:${ssid};P:${password};;`;
+      let text = wifi_default("WPA", ssid, password);
       generate(text);
     });
   });
 })();
-//# sourceMappingURL=index-QORYYG7Q.js.map
+//# sourceMappingURL=index-OLAX7DRF.js.map

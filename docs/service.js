@@ -1,12 +1,14 @@
-const tag = '1';
+const tag = '2';
 const prefix = 'WIFI-QR';
 const cacheName = `${prefix}-${tag}`;
 
 const urls = [
-  "/wifi-qr/javascripts/index-QORYYG7Q.js.map",
-  "/wifi-qr/javascripts/index-QORYYG7Q.js",
-  "/wifi-qr/stylesheets/index-QP2AH4VW.css.map",
-  "/wifi-qr/stylesheets/index-QP2AH4VW.css",
+  "/wifi-qr/javascripts/index-OLAX7DRF.js.map",
+  "/wifi-qr/javascripts/index-OLAX7DRF.js",
+  "/wifi-qr/stylesheets/index-SZFGR2FH.css.map",
+  "/wifi-qr/stylesheets/index-SZFGR2FH.css",
+  "/wifi-qr/stylesheets/print-BKZYJTBT.css.map",
+  "/wifi-qr/stylesheets/print-BKZYJTBT.css",
   "/wifi-qr/images/icon-152-YPJW54XW.png",
   "/wifi-qr/images/icon-167-7PH5PONM.png",
   "/wifi-qr/images/icon-180-36LXCBYR.png",

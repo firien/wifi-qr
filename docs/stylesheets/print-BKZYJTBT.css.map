@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../stylesheets/print.css"],
+  "sourcesContent": ["@media print {\n  * {\n    margin: 0;\n    box-sizing: border-box;\n    font-family: -apple-system, 'Helvetica Neue', 'Arial', 'Tahoma';\n  }\n  div.form, #about {\n    display: none;\n  }\n  body > .flex {\n    height: 100vh;\n    width: 100vw;\n  }\n  .center {\n    display: flex;\n    height: 100vh;\n    width: 100vw;\n    justify-content: space-around;\n    align-items: center;\n  }\n  figcaption {\n    margin-top: 2em;\n    text-align: center;\n  }\n}\n"],
+  "mappings": ";AAAA;AACE;AACE;AACA;AACA;AAAA;AAAA;AAAA;AAAA;AAAA;AAEF;AAAA;AACE;AAAA;AAEF;AACE;AACA;AAAA;AAEF;AACE;AACA;AACA;AACA;AACA;AAAA;AAEF;AACE;AACA;AAAA;AAAA;",
+  "names": []
+}
