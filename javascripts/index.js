@@ -1,4 +1,5 @@
 import { QR } from 'qr-image/lib/qr-base'
+import wifiConfig from '../javascripts/wifi.js'
 
 // qr lib was built for node
 // here is a barebone buffer polyfill
@@ -83,16 +84,14 @@ const generate = function(text) {
 };
 
 document.addEventListener('DOMContentLoaded', function() {
-  document.querySelector('#qr img').addEventListener('click', function() {
-    return window.print();
-  });
-  return document.querySelector('form#wifi').addEventListener('submit', function(e) {
+  document.querySelector('#qr img').addEventListener('click', () => window.print());
+  document.querySelector('form#wifi').addEventListener('submit', function(e) {
     e.preventDefault();
     e.stopPropagation();
     // https://github.com/zxing/zxing/wiki/Barcode-Contents#wi-fi-network-config-android-ios-11
     let ssid = this['ssid'].value;
     let password = this['password'].value;
-    let text = `WIFI:T:WPA;S:${ssid};P:${password};;`;
+    let text = wifiConfig('WPA', ssid, password);
     generate(text);
   });
 });
