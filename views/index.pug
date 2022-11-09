@@ -11,6 +11,7 @@ html(lang="en")
     script&attributes(scriptAttributes('index.js'))
     // css
     link(rel='stylesheet' href=webAssetPath('index.css'))
+    link(rel='stylesheet' href=webAssetPath('print.css') media='print')
     // icons
     link(rel="icon" href="favicon.ico" type="image/x-icon")
     each icon in iconLinks()

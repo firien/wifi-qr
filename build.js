@@ -13,6 +13,7 @@ try {
     entryPoints: [
       'javascripts/index.js',
       'stylesheets/index.css',
+      'stylesheets/print.css',
       'images/icon-152.png',
       'images/icon-167.png',
       'images/icon-180.png',

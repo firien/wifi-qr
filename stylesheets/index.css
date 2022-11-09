@@ -1,3 +1,14 @@
+:root {
+  --backgound-color: white;
+  --text-color: black;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --backgound-color: black;
+    --text-color: white;
+  }
+}
+
 @media screen {
   body {
     background-color: #8b2e62;
@@ -10,7 +21,7 @@
   }
   body > .flex {
     align-items: center;
-    background-color: white;
+    background-color: var(--backgound-color);
   }
   .flex {
     display: flex;
@@ -22,6 +33,8 @@
     animation: pop 0.35s;
     animation-timing-function: ease-out;
     cursor: pointer;
+    background-color: white;
+    border: solid thick white;
   }
   #qr img:not([height]) {
     height: 204px;
@@ -84,6 +97,7 @@
   label {
     text-align: right;
     padding-right: 1em;
+    color: var(--text-color);
   }
   input {
     appearance: none;
@@ -178,28 +192,3 @@
   }
 }
 
-@media print {
-  * {
-    margin: 0;
-    box-sizing: border-box;
-    font-family: -apple-system, 'Helvetica Neue', 'Arial', 'Tahoma';
-  }
-  div.form, #about {
-    display: none;
-  }
-  body > .flex {
-    height: 100vh;
-    width: 100vw;
-  }
-  .center {
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    justify-content: space-around;
-    align-items: center;
-  }
-  figcaption {
-    margin-top: 2em;
-    text-align: center;
-  }
-}
