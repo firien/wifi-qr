@@ -4,7 +4,8 @@ import ghPages from 'esbuild-plugin-ghpages-pwa';
 let { plugin: githubPages, buildOptions } = ghPages({
   app: 'wifi-qr',
   description: 'QR code to join Wi-Fi network',
-  cacheTag: 1,
+  cacheTag: 2,
+  theme_color: '#8b2e62',
   serve: 3015
 })
 
