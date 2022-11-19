@@ -1,4 +1,5 @@
 ![node test](https://github.com/firien/wifi-qr/actions/workflows/node.js.yml/badge.svg?event=push)
+![browser test](https://github.com/firien/wifi-qr/actions/workflows/playwright.js.yml/badge.svg?event=push)
 
 # WiFi QR
 A small [PWA](https://developer.mozilla.org/en-US/docs/Web/Apps/Progressive) to generate QR codes to join a WiFi network.
