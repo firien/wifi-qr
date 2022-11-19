@@ -1,6 +1,6 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import wifiConfig from '../javascripts/wifi.js'
+import wifiConfig from '../../javascripts/wifi.js'
 
 test('escaping', () => {
   assert.strictEqual(wifiConfig('WPA', 'asdf', 'pass'), `WIFI:T:WPA;S:asdf;P:pass;;`)
