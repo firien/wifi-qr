@@ -1,5 +1,11 @@
 import { QR } from 'qr-image/lib/qr-base'
 import wifiConfig from '../javascripts/wifi.js'
+import pwa from 'esbuild-plugin-ghpages-pwa/src/pwa.js';
+
+if (window.location.protocol === 'https:') {
+  pwa('wifi-qr');
+}
+
 
 // qr lib was built for node
 // here is a barebone buffer polyfill
