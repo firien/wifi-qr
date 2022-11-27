@@ -6,6 +6,9 @@
   var __getProtoOf = Object.getPrototypeOf;
   var __hasOwnProp = Object.prototype.hasOwnProperty;
   var __markAsModule = (target) => __defProp(target, "__esModule", { value: true });
+  var __esm = (fn, res) => function __init() {
+    return fn && (res = (0, fn[__getOwnPropNames(fn)[0]])(fn = 0)), res;
+  };
   var __commonJS = (cb, mod) => function __require() {
     return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
   };
@@ -21,10 +24,43 @@
     return __reExport(__markAsModule(__defProp(module != null ? __create(__getProtoOf(module)) : {}, "default", !isNodeMode && module && module.__esModule ? { get: () => module.default, enumerable: true } : { value: module, enumerable: true })), module);
   };
 
+  // node_modules/esbuild-plugin-ghpages-pwa/src/pwa.js
+  var pwa;
+  var init_pwa = __esm({
+    "node_modules/esbuild-plugin-ghpages-pwa/src/pwa.js"() {
+      pwa = () => {
+        if ("serviceWorker" in navigator) {
+          let scope = window.location.pathname;
+          navigator.serviceWorker.register(`${scope}service.js`, { scope }).then((registration) => {
+            const refreshPage = (worker) => {
+              if (worker.state != "activated") {
+                worker.postMessage({ action: "skipWaiting" });
+              }
+              window.location.reload();
+            };
+            if (registration.waiting) {
+              refreshPage(registration.waiting);
+            }
+            registration.addEventListener("updatefound", () => {
+              let newWorker = registration.installing;
+              newWorker.addEventListener("statechange", () => {
+                if (newWorker.state === "installed") {
+                  refreshPage(newWorker);
+                }
+              });
+            });
+          });
+        }
+      };
+      pwa();
+    }
+  });
+
   // node_modules/qr-image/lib/encode.js
   var require_encode = __commonJS({
     "node_modules/qr-image/lib/encode.js"(exports, module) {
       "use strict";
+      init_pwa();
       function pushBits(arr, n, value) {
         for (var bit = 1 << n - 1; bit; bit = bit >>> 1) {
           arr.push(bit & value ? 1 : 0);
@@ -164,6 +200,7 @@
   var require_errorcode = __commonJS({
     "node_modules/qr-image/lib/errorcode.js"(exports, module) {
       "use strict";
+      init_pwa();
       var GF256_BASE = 285;
       var EXP_TABLE = [1];
       var LOG_TABLE = [];
@@ -235,6 +272,7 @@
   var require_matrix = __commonJS({
     "node_modules/qr-image/lib/matrix.js"(exports, module) {
       "use strict";
+      init_pwa();
       function init(version) {
         var N = version * 4 + 17;
         var matrix = [];
@@ -584,6 +622,7 @@
   var require_qr_base = __commonJS({
     "node_modules/qr-image/lib/qr-base.js"(exports, module) {
       "use strict";
+      init_pwa();
       var encode = require_encode();
       var calculateEC = require_errorcode();
       var matrix = require_matrix();
@@ -740,9 +779,11 @@
   });
 
   // javascripts/index.js
+  init_pwa();
   var import_qr_base = __toESM(require_qr_base(), 1);
 
   // javascripts/wifi.js
+  init_pwa();
   var regex = /[\\;,":]/g;
   var escape = (string) => string.replace(regex, "\\$&");
   var wifi_default = (type, ssid, password) => {
@@ -834,4 +875,4 @@
     });
   });
 })();
-//# sourceMappingURL=index-OLAX7DRF.js.map
+//# sourceMappingURL=index-UM4QW6SA.js.map

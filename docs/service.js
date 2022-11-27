@@ -3,8 +3,8 @@ const prefix = 'WIFI-QR';
 const cacheName = `${prefix}-${tag}`;
 
 const urls = [
-  "/wifi-qr/javascripts/index-OLAX7DRF.js.map",
-  "/wifi-qr/javascripts/index-OLAX7DRF.js",
+  "/wifi-qr/javascripts/index-UM4QW6SA.js.map",
+  "/wifi-qr/javascripts/index-UM4QW6SA.js",
   "/wifi-qr/stylesheets/index-SZFGR2FH.css.map",
   "/wifi-qr/stylesheets/index-SZFGR2FH.css",
   "/wifi-qr/stylesheets/print-BKZYJTBT.css.map",
