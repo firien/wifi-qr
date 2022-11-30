@@ -15,7 +15,6 @@
     "qr-image": "^3.2.0"
   },
   "scripts": {
-    "dev": "node ./build.js",
-    "build": "NODE_ENV=production node ./build.js"
+    "build": "node ./build.js"
   }
 }
