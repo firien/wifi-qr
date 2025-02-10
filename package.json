@@ -9,7 +9,7 @@
   "type": "module",
   "devDependencies": {
     "@playwright/test": "^1.28.0",
-    "esbuild": "^0.14.7",
+    "esbuild": "^0.25.0",
     "esbuild-plugin-ghpages-pwa": "github:firien/esbuild-plugin-ghpages-pwa",
     "playwright": "^1.28.0",
     "qr-image": "^3.2.0"
